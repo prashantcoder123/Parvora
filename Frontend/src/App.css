@@ -1,0 +1,140 @@
+.section-padding {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.section-label {
+  color: rgb(196 181 253);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  margin-top: 1rem;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.hero-gradient {
+  background: linear-gradient(90deg,
+      #ffffff 0%,
+      #c4b5fd 45%,
+      #8b5cf6 70%,
+      #ffffff 100%);
+
+  background-size: 200% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+
+  animation: gradientMove 6s linear infinite;
+}
+
+.service-card {
+  min-height: 340px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 1.5rem;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  padding: 2rem;
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    background 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(139, 92, 246, 0.4);
+
+  background: rgba(139, 92, 246, 0.05);
+}
+
+.project-card {
+  position: relative;
+
+  display: flex;
+
+  min-height: 390px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 1.5rem;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  padding: 1.5rem;
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+.project-preview {
+  position: relative;
+
+  display: flex;
+
+  min-height: 320px;
+
+  width: 42%;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 1rem;
+
+  background: #0c0b13;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% center;
+  }
+
+  50% {
+    background-position: 100% center;
+  }
+
+  100% {
+    background-position: 0% center;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-preview {
+    min-height: 230px;
+    width: 100%;
+  }
+}

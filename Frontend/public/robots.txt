@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pravora.online/sitemap.xml
